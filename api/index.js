@@ -4,14 +4,7 @@ const bodyParser = require('body-parser')
 
 app.use(bodyParser.json())
 
-app.get('/api/filmes', (requisicao, resposta) => {
-    const filmes = [
-        { nome: 'Os Vingadores 3'},
-        { nome: 'Destacamento Blood'},
-        { nome: 'Pantera Negra'}
-    ]
-
-    resposta.send(JSON.stringify(filmes))
-})
+const roteador = require('./rotas/filmes')
+app.use('/api/filmes/', roteador)
 
 app.listen(3000, () => console.log('Teste'))
