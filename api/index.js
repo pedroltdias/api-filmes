@@ -7,4 +7,4 @@ app.use(bodyParser.json())
 const roteador = require('./rotas/filmes')
 app.use('/api/filmes/', roteador)
 
-app.listen(3000, () => console.log('Teste'))
+app.listen(3000, () => console.log('a api esta funcionando ...'))
